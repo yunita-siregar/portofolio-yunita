@@ -136,6 +136,11 @@ section {
     letter-spacing: 3px;
 }
 
+/* FOTO HP DISEMBUNYIKAN PADA LAPTOP */
+.mobile-profile {
+    display: none;
+}
+
 .hero-line {
     width: 75px;
     height: 3px;
@@ -523,8 +528,9 @@ footer {
     }
 }
 
-/* RESPONSIVE HP - TULISAN DI ATAS, FOTO DI BAWAH */
+/* RESPONSIVE HP */
 @media (max-width: 768px) {
+
     nav {
         flex-direction: column;
         gap: 15px;
@@ -551,7 +557,7 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 35px;
+        gap: 25px;
     }
 
     .hero-content {
@@ -563,8 +569,26 @@ footer {
         letter-spacing: 2px;
     }
 
+    /* FOTO MUNCUL SETELAH WELCOME */
+    .mobile-profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 0;
+    }
+
+    .mobile-profile .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* FOTO LAPTOP DISEMBUNYIKAN DI HP */
+    .profile-container {
+        display: none;
+    }
+
     .hero-line {
-        margin: 20px auto 30px;
+        margin: 20px auto 25px;
     }
 
     .hero h1 {
@@ -577,15 +601,6 @@ footer {
         font-size: 14px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .profile-container {
-        flex-basis: auto;
-    }
-
-    .profile-photo {
-        width: 180px;
-        height: 180px;
     }
 
     .about-content {
