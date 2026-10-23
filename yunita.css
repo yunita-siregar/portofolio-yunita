@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-/* WARNA DAN PENGATURAN DASAR */
+/* =========================
+   GLOBAL STYLE
+========================= */
+
 :root {
-    --background: #1D1423;
-    --card: #281B30;
-    --pink: #F4A7C1;
-    --lavender: #E8C9F2;
-    --white: #FFF1F6;
-    --muted: #D9C6D7;
-    --border: #49334D;
+    --bg: #17111f;
+    --bg-alt: #211729;
+    --card: #2a2033;
+    --pink: #f4a7c1;
+    --lavender: #d9b7f2;
+    --white: #fff5fb;
+    --muted: #c7b8cf;
+    --border: #49394f;
 }
 
 * {
@@ -24,7 +28,7 @@ html {
 
 body {
     font-family: 'Inter', Arial, sans-serif;
-    background: var(--background);
+    background: var(--bg);
     color: var(--white);
     line-height: 1.8;
     overflow-x: hidden;
@@ -35,17 +39,68 @@ a {
     text-decoration: none;
 }
 
-/* NAVBAR */
-nav {
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-alt {
+    background: var(--bg-alt);
+}
+
+.section-label {
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section h2 {
+    font-size: clamp(30px, 4vw, 49px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 42px;
+}
+
+.eyebrow {
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 20px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
-    background: rgba(29, 20, 35, 0.96);
+    gap: 24px;
+    padding: 18px 7%;
+    background: rgba(23, 17, 31, 0.97);
     border-bottom: 1px solid var(--border);
 }
 
@@ -53,74 +108,44 @@ nav {
     color: var(--pink);
     font-size: 27px;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-nav ul {
+.navbar nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
-    list-style: none;
+    gap: 24px;
 }
 
-nav ul a {
+.navbar nav a {
+    color: var(--muted);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--muted);
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-nav ul a:hover {
+.navbar nav a:hover {
     color: var(--pink);
 }
 
-/* SEMUA SECTION */
-section {
-    padding: 100px 9%;
-}
-
-.section-title {
-    color: var(--pink);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
-}
-
-.section-heading {
-    font-size: clamp(30px, 5vw, 52px);
-    font-weight: 800;
-    line-height: 1.25;
-    margin-bottom: 48px;
-    letter-spacing: -1.5px;
-}
-
-/* HOME */
-#home {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(
-            ellipse at 80% 75%,
-            rgba(147, 86, 176, 0.22),
-            transparent 55%
-        ),
-        radial-gradient(
-            ellipse at 20% 80%,
-            rgba(244, 167, 193, 0.09),
-            transparent 60%
-        ),
-        var(--background);
-}
+/* =========================
+   HOME
+========================= */
 
 .hero {
-    width: 100%;
+    min-height: 85vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    align-items: center;
+    gap: 50px;
+    background:
+        radial-gradient(
+            circle at 85% 55%,
+            rgba(174, 102, 199, 0.18),
+            transparent 45%
+        ),
+        var(--bg);
 }
 
 .hero-content {
@@ -129,101 +154,97 @@ section {
     animation: fadeUp 0.9s ease both;
 }
 
-.hello {
-    color: var(--pink);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-/* FOTO HP DISEMBUNYIKAN PADA LAPTOP */
-.mobile-profile {
-    display: none;
-}
-
-.hero-line {
-    width: 75px;
-    height: 3px;
-    margin: 20px 0 32px;
-    background: linear-gradient(
-        90deg,
-        var(--pink),
-        var(--lavender)
-    );
-    box-shadow: 0 0 15px rgba(244, 167, 193, 0.4);
-}
-
 .hero h1 {
-    font-size: clamp(32px, 4.2vw, 70px);
+    font-size: clamp(30px, 4.5vw, 65px);
     font-weight: 900;
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: -2px;
     white-space: nowrap;
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
 .hero h1 span {
     color: var(--pink);
 }
 
-.hero p {
-    max-width: 650px;
+.hero-subtitle {
+    color: var(--lavender);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 570px;
     color: var(--muted);
     font-size: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
-.hero .hero-subtitle {
-    color: var(--white);
-    font-weight: 700;
+/* FOTO PROFIL */
+
+.hero-image {
+    flex: 0 0 230px;
+    display: flex;
+    justify-content: center;
 }
 
-.button {
+.hero-image img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid var(--pink);
+    box-shadow:
+        0 0 25px rgba(244, 167, 193, 0.4),
+        0 0 65px rgba(217, 183, 242, 0.15);
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 14px 27px;
-    border: 1px solid var(--pink);
+    padding: 13px 24px;
     border-radius: 8px;
-    color: var(--white);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
 
-.button:hover {
+.btn-primary {
     background: var(--pink);
-    color: var(--background);
+    color: var(--bg);
+    border: 1px solid var(--pink);
+}
+
+.btn-outline {
+    color: var(--white);
+    border: 1px solid var(--pink);
+}
+
+.btn:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(244, 167, 193, 0.2);
 }
 
-/* FOTO PROFIL */
-.profile-container {
-    flex: 0 0 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-outline:hover {
+    background: var(--pink);
+    color: var(--bg);
 }
 
-.profile-photo {
-    width: 230px;
-    height: 230px;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 4px solid var(--pink);
-    box-shadow:
-        0 0 20px rgba(244, 167, 193, 0.5),
-        0 0 50px rgba(190, 124, 217, 0.2);
-    animation: floating 4s ease-in-out infinite;
-}
+/* =========================
+   ABOUT ME
+========================= */
 
-/* ABOUT */
-.about-content {
+.about-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
-    gap: 55px;
+    gap: 60px;
     align-items: start;
 }
 
@@ -233,254 +254,283 @@ section {
     margin-bottom: 22px;
 }
 
-.info-box {
-    padding: 35px;
+.about-info {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 18px;
+    padding: 30px;
 }
 
-.info {
-    padding: 15px 0;
+.about-info div {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 0;
     border-bottom: 1px solid var(--border);
 }
 
-.info:first-child {
-    padding-top: 0;
-}
-
-.info:last-child {
+.about-info div:last-child {
     border-bottom: none;
-    padding-bottom: 0;
 }
 
-.info small {
+.about-info small {
     color: var(--pink);
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-.info p {
-    margin-top: 5px;
-    color: var(--white);
-    font-size: 15px;
+.about-info strong {
+    font-size: 14px;
     font-weight: 600;
+    margin-top: 5px;
 }
 
-/* SKILLS */
-#skills {
-    background: #211729;
-}
+/* =========================
+   MY SKILLS
+========================= */
 
-.learning-grid {
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
-.learning-card {
-    padding: 32px;
+.skill-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
+    padding: 30px;
     transition: 0.3s ease;
 }
 
-.learning-card:hover {
-    transform: translateY(-7px);
+.skill-card:hover {
+    transform: translateY(-6px);
     border-color: var(--pink);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.learning-card span {
+.skill-card small {
     color: var(--pink);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
-.learning-card h3 {
+.skill-card h3 {
+    font-size: 19px;
     margin: 15px 0;
-    font-size: 20px;
 }
 
-.learning-card p {
+.skill-card p {
     color: var(--muted);
     font-size: 14px;
 }
 
-/* JOURNEY */
-.journey {
-    max-width: 900px;
-    border-left: 2px solid var(--border);
-    padding-left: 30px;
+/* =========================
+   MY JOURNEY
+========================= */
+
+.journey-list {
+    max-width: 980px;
 }
 
 .journey-item {
-    position: relative;
-    padding: 0 0 45px;
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 30px;
+    align-items: center;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .journey-item:last-child {
-    padding-bottom: 0;
+    border-bottom: none;
 }
 
-.journey-item::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: -38px;
-    width: 12px;
-    height: 12px;
-    background: var(--pink);
-    border: 3px solid var(--background);
-    border-radius: 50%;
-    box-shadow: 0 0 12px var(--pink);
+/* FOTO KEGIATAN */
+
+.journey-visual {
+    width: 170px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: 0.35s ease;
 }
 
-.journey-item small {
+.journey-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.journey-visual:hover {
+    border-color: var(--pink);
+    box-shadow: 0 8px 25px rgba(244, 167, 193, 0.18);
+}
+
+.journey-visual:hover img {
+    transform: scale(1.06);
+}
+
+/* LOGO UNIVERSITAS */
+
+.university-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background: #f7f1fa;
+}
+
+.university-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* DESKRIPSI MY JOURNEY */
+
+.journey-content small {
     color: var(--pink);
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-.journey-item h3 {
-    margin: 10px 0;
+.journey-content h3 {
     font-size: 22px;
+    line-height: 1.4;
+    margin: 8px 0;
 }
 
-.journey-item p {
+.journey-content p {
     color: var(--muted);
     font-size: 15px;
+    max-width: 650px;
 }
 
-/* PROJECTS */
-#projects {
-    background: #211729;
-}
+/* =========================
+   PROJECTS
+========================= */
 
-.projects {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
-.project {
-    padding: 38px;
+.project-card {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 18px;
+    padding: 35px;
     transition: 0.3s ease;
 }
 
-.project:hover {
+.project-card:hover {
     transform: translateY(-6px);
     border-color: var(--pink);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.project-number {
+.project-card small {
     color: var(--pink);
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
-.project h3 {
-    margin: 20px 0;
-    font-size: 23px;
+.project-card h3 {
+    font-size: 22px;
+    margin: 15px 0;
 }
 
-.project p {
+.project-card p {
     color: var(--muted);
     font-size: 15px;
 }
 
-/* CONTACT */
-.contact-box {
-    padding: 65px;
+.project-link {
+    display: inline-block;
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 22px;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--lavender);
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card {
+    padding: 60px;
+    border-radius: 22px;
+    border: 1px solid var(--border);
     background: linear-gradient(
         135deg,
-        #30203D,
-        #442C55
+        #30203d,
+        #493052
     );
-    border: 1px solid var(--border);
-    border-radius: 24px;
 }
 
-.contact-box h2 {
-    font-size: clamp(34px, 5.5vw, 65px);
-    font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
+.contact-card h2 {
+    max-width: 800px;
+    font-size: clamp(32px, 5vw, 58px);
 }
 
-.contact-box h2 span {
+.contact-card h2 span {
     color: var(--pink);
 }
 
-.contact-box p {
+.contact-card p {
+    max-width: 650px;
     color: var(--muted);
-    max-width: 680px;
     font-size: 15px;
     margin-bottom: 30px;
 }
 
-.contact-buttons {
+.contact-links {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.contact-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 28px;
-    border: 1px solid var(--pink);
-    border-radius: 9px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.email-button {
-    background: var(--pink);
-    color: var(--background);
-}
-
-.instagram-button {
-    background: transparent;
-    color: var(--white);
-}
-
-.contact-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(244, 167, 193, 0.2);
-}
-
-.instagram-button:hover {
-    background: var(--pink);
-    color: var(--background);
-}
-
-/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 28px 9%;
+    padding: 28px 8%;
     border-top: 1px solid var(--border);
+}
+
+footer p {
     color: var(--muted);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* ANIMASI */
+/* =========================
+   ANIMATIONS
+========================= */
+
 @keyframes floating {
     0%, 100% {
         transform: translateY(0);
@@ -503,145 +553,202 @@ footer {
     }
 }
 
-/* RESPONSIVE TABLET */
-@media (max-width: 1100px) {
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
     .hero {
         gap: 25px;
     }
 
     .hero h1 {
-        font-size: clamp(28px, 4vw, 48px);
-        letter-spacing: -1px;
+        font-size: clamp(28px, 4vw, 45px);
     }
 
-    .profile-container {
+    .hero-image {
         flex-basis: 190px;
     }
 
-    .profile-photo {
+    .hero-image img {
         width: 190px;
         height: 190px;
     }
 
-    .learning-grid {
+    .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
 }
 
-/* RESPONSIVE HP */
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
 @media (max-width: 768px) {
 
-    nav {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    .navbar {
         flex-direction: column;
-        gap: 15px;
-        padding: 18px 5%;
+        gap: 12px;
+        padding: 15px 5%;
     }
 
-    nav ul {
+    .navbar nav {
         justify-content: center;
-        gap: 12px 18px;
+        gap: 10px 16px;
     }
 
-    nav ul a {
+    .navbar nav a {
         font-size: 10px;
     }
 
-    section {
+    .section {
         padding: 65px 6%;
     }
 
-    #home {
-        min-height: auto;
-    }
+    /* HOME MOBILE */
 
     .hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
         text-align: center;
+        min-height: auto;
         gap: 25px;
     }
 
-    .hero-content {
-        width: 100%;
+    .hero-image {
+        flex: none;
     }
 
-    .hello {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    /* FOTO MUNCUL SETELAH WELCOME */
-    .mobile-profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 25px 0;
-    }
-
-    .mobile-profile .profile-photo {
+    .hero-image img {
         width: 180px;
         height: 180px;
     }
 
-    /* FOTO LAPTOP DISEMBUNYIKAN DI HP */
-    .profile-container {
-        display: none;
-    }
-
-    .hero-line {
-        margin: 20px auto 25px;
-    }
-
     .hero h1 {
-        font-size: clamp(28px, 7vw, 42px);
+        font-size: clamp(27px, 7vw, 42px);
         white-space: normal;
         letter-spacing: -1px;
     }
 
-    .hero p {
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .hero-description {
         font-size: 14px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+    /* ABOUT, SKILLS, PROJECTS */
 
-    .learning-grid,
-    .projects {
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-box {
+    .about-grid {
+        gap: 25px;
+    }
+
+    /* MY JOURNEY MOBILE */
+
+    .journey-item {
+        grid-template-columns: 105px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+        padding: 26px 0;
+    }
+
+    .journey-visual {
+        width: 105px;
+        height: 105px;
+        border-radius: 13px;
+    }
+
+    .university-logo {
+        padding: 7px;
+    }
+
+    .journey-content h3 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .journey-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .journey-content small {
+        font-size: 10px;
+    }
+
+    /* CONTACT MOBILE */
+
+    .contact-card {
         padding: 35px 25px;
     }
 
-    .contact-box h2 {
-        letter-spacing: -1px;
+    .contact-links {
+        gap: 12px;
     }
 
     footer {
         justify-content: center;
         text-align: center;
     }
+
 }
 
-/* AKSESIBILITAS ANIMASI */
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .journey-item {
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .journey-visual {
+        width: 85px;
+        height: 95px;
+    }
+
+    .journey-content h3 {
+        font-size: 16px;
+    }
+
+    .journey-content p {
+        font-size: 12px;
+    }
+
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
 
-    .profile-photo,
-    .hero-content {
-        animation: none;
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
     }
 
-    .button,
-    .learning-card,
-    .project,
-    .contact-button {
-        transition: none;
-    }
 }
