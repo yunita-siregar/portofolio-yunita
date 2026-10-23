@@ -3,416 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Portfolio Yunita Siregar, mahasiswa Teknik Informatika Universitas Indraprasta PGRI.">
-
+    <meta name="description" content="Portofolio pribadi Yunita Siregar, mahasiswa Teknik Informatika Universitas Indraprasta PGRI.">
     <title>Yunita Siregar | Personal Portfolio</title>
-
     <link rel="stylesheet" href="yunita.css">
 </head>
-
 <body>
 
     <!-- NAVIGATION -->
-    <header class="navbar">
-        <a href="#home" class="logo">YS.</a>
+    <header class="header">
+        <nav class="navbar container" aria-label="Navigasi utama">
+            <a href="#home" class="logo">Yunita Siregar<span>.</span></a>
 
-        <nav aria-label="Navigasi utama">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#journey">JOURNEY</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
+            <div class="nav-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#journey">JOURNEY</a>
+                <a href="#project">PROJECT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
         </nav>
     </header>
 
     <main>
 
         <!-- HOME -->
-        <section id="home" class="hero section">
-
+        <section id="home" class="hero container">
             <div class="hero-content">
-                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+                <p class="eyebrow hero-welcome">WELCOME TO MY PORTFOLIO</p>
 
-                <h1>YUNITA <span>SIREGAR.</span></h1>
+                <h1 class="hero-name">Yunita Siregar<span>.</span></h1>
 
-                <p class="hero-subtitle">
-                    Informatics Engineering Student
-                </p>
+                <p class="hero-role">Informatics Engineering Student</p>
 
                 <p class="hero-description">
-                    Selamat datang di portofolio pribadi saya.
-                    Di sini, saya berbagi perjalanan pendidikan,
-                    keterampilan, serta berbagai kegiatan dan
-                    proyek yang pernah saya kerjakan.
+                    Melalui website ini, saya membagikan perjalanan pendidikan,
+                    keterampilan, pengalaman organisasi, serta proyek yang saya
+                    kerjakan selama proses belajar dan mengembangkan diri.
                 </p>
 
-                <a href="#about" class="btn btn-primary">
-                    GET TO KNOW ME ↓
+                <a href="#about" class="btn-primary hero-button">
+                    GET TO KNOW ME <span aria-hidden="true">↓</span>
                 </a>
             </div>
 
-            <div class="hero-image">
-                <img src="yunita.jpeg" alt="Foto profil Yunita Siregar">
+            <div class="hero-photo">
+                <div class="photo-frame">
+                    <img src="yunita.jpeg" alt="Foto profil Yunita Siregar">
+                </div>
             </div>
-
         </section>
 
         <!-- ABOUT ME -->
         <section id="about" class="section">
             <div class="container">
-
                 <p class="section-label">01 — ABOUT ME</p>
-                <h2>Get to Know Me.</h2>
+                <h2 class="section-title">Get to Know <span>Me.</span></h2>
 
                 <div class="about-grid">
-
                     <div class="about-text">
                         <p>
-                            Halo! Saya Yunita Siregar, mahasiswa
-                            semester 5 Program Studi Teknik Informatika
-                            di Universitas Indraprasta PGRI.
+                            Halo! Saya <strong>Yunita Siregar</strong>, mahasiswa semester 5
+                            Program Studi Teknik Informatika di
+                            Universitas Indraprasta PGRI.
                         </p>
 
                         <p>
-                            Saya percaya bahwa setiap proses memiliki
-                            nilai tersendiri. Melalui perkuliahan,
-                            saya tidak hanya memperoleh pengetahuan,
-                            tetapi juga belajar berpikir kritis,
-                            menghadapi tantangan, dan menemukan cara
-                            untuk terus meningkatkan kemampuan diri.
+                            Bagi saya, setiap proses belajar memiliki cerita dan
+                            pengalaman tersendiri. Melalui perkuliahan, saya tidak
+                            hanya memperoleh pengetahuan, tetapi juga belajar
+                            untuk berpikir kritis, menghadapi tantangan, dan
+                            terus mengembangkan kemampuan diri.
                         </p>
 
                         <p>
-                            Bagi saya, kedisiplinan, tanggung jawab,
-                            dan kemauan untuk mencoba hal baru
-                            merupakan bekal penting dalam meraih tujuan.
-                            Saya ingin terus memperluas wawasan,
-                            memperoleh pengalaman berharga,
-                            dan mempersiapkan diri untuk masa depan.
+                            Saya percaya bahwa kedisiplinan, tanggung jawab,
+                            dan kemauan untuk mencoba hal baru merupakan bagian
+                            penting dalam proses berkembang. Saya ingin terus
+                            belajar, memperluas pengalaman, dan menjadi pribadi
+                            yang lebih baik dari waktu ke waktu.
                         </p>
                     </div>
 
-                    <div class="about-info">
-
-                        <div>
-                            <small>FULL NAME</small>
+                    <div class="info-card">
+                        <div class="info-item">
+                            <span>FULL NAME</span>
                             <strong>Yunita Siregar</strong>
                         </div>
 
-                        <div>
-                            <small>STATUS</small>
-                            <strong>Mahasiswa Semester 5</strong>
+                        <div class="info-item">
+                            <span>STATUS</span>
+                            <strong>Undergraduate Student</strong>
                         </div>
 
-                        <div>
-                            <small>MAJOR</small>
-                            <strong>Teknik Informatika</strong>
+                        <div class="info-item">
+                            <span>MAJOR</span>
+                            <strong>Informatics Engineering</strong>
                         </div>
 
-                        <div>
-                            <small>UNIVERSITY</small>
+                        <div class="info-item">
+                            <span>UNIVERSITY</span>
                             <strong>Universitas Indraprasta PGRI</strong>
                         </div>
 
-                        <div>
-                            <small>LOCATION</small>
+                        <div class="info-item">
+                            <span>LOCATION</span>
                             <strong>Jakarta, Indonesia</strong>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- MY SKILLS -->
         <section id="skills" class="section section-alt">
             <div class="container">
-
                 <p class="section-label">02 — MY SKILLS</p>
-                <h2>Skills I'm Developing.</h2>
+                <h2 class="section-title">Learning & <span>Developing.</span></h2>
 
-                <p class="section-description">
-                    Keterampilan teknis dan personal yang saya
-                    kembangkan melalui perkuliahan serta
-                    berbagai aktivitas.
+                <p class="section-intro">
+                    Keterampilan yang saya gunakan dan terus kembangkan
+                    melalui kegiatan perkuliahan serta pengalaman organisasi.
                 </p>
 
                 <div class="skills-grid">
-
                     <article class="skill-card">
-                        <small>01 — TECHNICAL</small>
-                        <h3>Web Development</h3>
-                        <p>
-                            Memahami dasar pembuatan website
-                            menggunakan HTML dan CSS.
-                        </p>
+                        <div class="skill-icon" aria-hidden="true">▤</div>
+                        <h3>Microsoft Word</h3>
+                        <p>Document Editing</p>
                     </article>
 
                     <article class="skill-card">
-                        <small>02 — TECHNICAL</small>
-                        <h3>Programming</h3>
-                        <p>
-                            Menerapkan logika pemrograman
-                            dalam latihan dan tugas sederhana.
-                        </p>
+                        <div class="skill-icon" aria-hidden="true">✦</div>
+                        <h3>Teamwork</h3>
+                        <p>Collaboration & Communication</p>
                     </article>
-
-                    <article class="skill-card">
-                        <small>03 — TECHNICAL</small>
-                        <h3>Database</h3>
-                        <p>
-                            Mengenal dasar pengelolaan basis data
-                            dan penggunaan perintah SQL.
-                        </p>
-                    </article>
-
-                    <article class="skill-card">
-                        <small>04 — PERSONAL</small>
-                        <h3>Manajemen Waktu</h3>
-                        <p>
-                            Mengatur prioritas dan membagi waktu
-                            antara perkuliahan serta kegiatan lainnya.
-                        </p>
-                    </article>
-
-                    <article class="skill-card">
-                        <small>05 — PERSONAL</small>
-                        <h3>Kolaborasi</h3>
-                        <p>
-                            Mampu bertukar ide, menghargai pendapat,
-                            dan bekerja sama untuk mencapai
-                            tujuan bersama.
-                        </p>
-                    </article>
-
-                    <article class="skill-card">
-                        <small>06 — PERSONAL</small>
-                        <h3>Disiplin</h3>
-                        <p>
-                            Menjaga konsistensi dalam menjalankan
-                            tugas dan memenuhi komitmen.
-                        </p>
-                    </article>
-
                 </div>
-
             </div>
         </section>
 
         <!-- MY JOURNEY -->
         <section id="journey" class="section">
             <div class="container">
-
                 <p class="section-label">03 — MY JOURNEY</p>
-                <h2>Learning Through Experience.</h2>
+                <h2 class="section-title">Learning Through <span>Experience.</span></h2>
+
+                <p class="section-intro">
+                    Perjalanan pendidikan dan berbagai pengalaman yang
+                    membantu saya belajar, berkembang, serta memahami
+                    pentingnya tanggung jawab dan kerja sama.
+                </p>
 
                 <div class="journey-list">
 
-                    <!-- UNIVERSITAS -->
-                    <article class="journey-item">
-
-                        <div class="journey-visual university-logo">
-                            <img src="logounindra.jpeg"
-                                 alt="Logo Universitas Indraprasta PGRI"
-                                 loading="lazy">
+                    <article class="journey-card">
+                        <div class="journey-image logo-image">
+                            <img src="logounindra.jpeg" alt="Logo Universitas Indraprasta PGRI" loading="lazy">
                         </div>
-
                         <div class="journey-content">
-                            <small>2024 — PRESENT</small>
+                            <span class="journey-tag">2024 — PRESENT</span>
                             <h3>Universitas Indraprasta PGRI</h3>
-                            <p>
-                                Menempuh pendidikan S1 Teknik
-                                Informatika sebagai langkah untuk
-                                memperdalam pengetahuan teknologi
-                                serta membangun kemampuan berpikir
-                                logis dan menyelesaikan masalah.
-                            </p>
+                            <p>Mahasiswa S1 Teknik Informatika sejak 2024.</p>
                         </div>
-
                     </article>
 
-                    <!-- SMAN 98 JAKARTA -->
-                    <article class="journey-item">
-
-                        <div class="journey-visual">
-                            <img src="ekstrakurikuler.jpeg"
-                                 alt="Kegiatan ekstrakurikuler SMAN 98 Jakarta"
-                                 loading="lazy">
+                    <article class="journey-card">
+                        <div class="journey-image">
+                            <img src="ekstrakurikuler.jpeg" alt="Kegiatan ekstrakurikuler saat SMA" loading="lazy">
                         </div>
-
                         <div class="journey-content">
-                            <small>2024 — GRADUATED</small>
+                            <span class="journey-tag">GRADUATED — 2024</span>
                             <h3>SMAN 98 Jakarta</h3>
-                            <p>
-                                Mengikuti kegiatan ekstrakurikuler
-                                yang memberikan pengalaman dalam
-                                bekerja sama, membangun kepercayaan
-                                diri, dan menghargai setiap
-                                tanggung jawab.
-                            </p>
+                            <p>Aktif mengikuti kegiatan ekstrakurikuler selama masa sekolah.</p>
                         </div>
-
                     </article>
 
-                    <!-- KARANG TARUNA -->
-                    <article class="journey-item">
-
-                        <div class="journey-visual">
-                            <img src="karangtaruna.jpeg"
-                                 alt="Dokumentasi kegiatan Karang Taruna"
-                                 loading="lazy">
+                    <article class="journey-card">
+                        <div class="journey-image">
+                            <img src="karangtaruna.jpeg" alt="Kegiatan Karang Taruna" loading="lazy">
                         </div>
-
                         <div class="journey-content">
-                            <small>ORGANIZATION</small>
+                            <span class="journey-tag">ORGANIZATION</span>
                             <h3>Karang Taruna</h3>
-                            <p>
-                                Berpartisipasi dalam kegiatan
-                                kepemudaan dan kemasyarakatan,
-                                sekaligus memperoleh pengalaman
-                                dalam berorganisasi, berkomunikasi,
-                                dan bekerja sama.
-                            </p>
+                            <p>Berpartisipasi dalam kegiatan kepemudaan dan kemasyarakatan.</p>
                         </div>
-
                     </article>
 
-                    <!-- PELAYANAN NATAL -->
-                    <article class="journey-item">
-
-                        <div class="journey-visual">
-                            <img src="pelayanannatal.jpeg"
-                                 alt="Dokumentasi kegiatan pelayanan Natal"
-                                 loading="lazy">
+                    <article class="journey-card">
+                        <div class="journey-image">
+                            <img src="pelayanannatal.jpeg" alt="Kegiatan pelayanan Natal" loading="lazy">
                         </div>
-
                         <div class="journey-content">
-                            <small>CHURCH SERVICE</small>
+                            <span class="journey-tag">CHURCH SERVICE</span>
                             <h3>Kegiatan Pelayanan Natal</h3>
-                            <p>
-                                Terlibat dalam persiapan dan
-                                pelaksanaan kegiatan Natal yang
-                                mengajarkan arti kebersamaan,
-                                kepedulian, dan komitmen
-                                dalam pelayanan.
-                            </p>
+                            <p>Terlibat dalam persiapan dan pelaksanaan kegiatan Natal.</p>
                         </div>
-
                     </article>
 
                 </div>
-
             </div>
         </section>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section section-alt">
+        <!-- MY PROJECT -->
+        <section id="project" class="section section-alt">
             <div class="container">
+                <p class="section-label">04 — MY PROJECT</p>
+                <h2 class="section-title">A Project I've <span>Built.</span></h2>
 
-                <p class="section-label">04 — MY PROJECTS</p>
-                <p class="eyebrow">FROM THEORY TO PRACTICE.</p>
-                <h2>A Glimpse of My Work.</h2>
+                <div class="project-card">
+                    <div class="project-visual" aria-hidden="true">
+                        <div class="mock-browser">
+                            <div class="browser-top">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="browser-content">
+                                <small>PERSONAL PORTFOLIO</small>
+                                <strong>Yunita Siregar.</strong>
+                                <div class="mock-line"></div>
+                                <div class="mock-line short"></div>
+                                <div class="mock-button"></div>
+                            </div>
+                        </div>
+                    </div>
 
-                <p class="section-description">
-                    Beberapa karya dan praktik perkuliahan
-                    yang menjadi bagian dari perjalanan
-                    saya di bidang teknologi.
-                </p>
-
-                <div class="projects-grid">
-
-                    <article class="project-card">
-                        <small>01 — PERSONAL PROJECT</small>
+                    <div class="project-content">
+                        <span class="journey-tag">WEB DEVELOPMENT</span>
                         <h3>Personal Portfolio Website</h3>
+
                         <p>
-                            Website pribadi yang dibuat menggunakan
-                            HTML dan CSS untuk menampilkan profil,
-                            keterampilan, pengalaman, dan proyek
-                            dalam satu halaman.
+                            Website portofolio pribadi yang saya buat menggunakan
+                            HTML dan CSS untuk menampilkan profil, keterampilan,
+                            dan pengalaman saya.
                         </p>
 
-                        <a href="https://yunita-siregar.github.io/portofolio-yunita/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="project-link">
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a
+                            href="https://yunita-siregar.github.io/portofolio-yunita/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
                             VIEW PROJECT ↗
                         </a>
-                    </article>
-
-                    <article class="project-card">
-                        <small>02 — ACADEMIC</small>
-                        <h3>Programming Practice</h3>
-                        <p>
-                            Mengerjakan berbagai latihan pemrograman
-                            selama perkuliahan, mulai dari penerapan
-                            logika hingga penyusunan kode sederhana.
-                        </p>
-                    </article>
-
-                    <article class="project-card">
-                        <small>03 — ACADEMIC</small>
-                        <h3>Database Practice</h3>
-                        <p>
-                            Melakukan praktik SQL untuk membuat
-                            tabel, memasukkan data, dan menjalankan
-                            perintah dasar pengelolaan basis data.
-                        </p>
-                    </article>
-
+                    </div>
                 </div>
-
             </div>
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="section">
+        <section id="contact" class="section contact-section">
             <div class="container">
-
                 <p class="section-label">05 — CONTACT</p>
+                <h2 class="section-title">Let's Connect & <span>Grow Together.</span></h2>
 
-                <div class="contact-card">
+                <p class="section-intro">
+                    Terima kasih telah mengunjungi portofolio saya.
+                    Saya terbuka untuk berbagi pengalaman, bertukar ide,
+                    dan mempelajari hal-hal baru.
+                </p>
 
-                    <h2>
-                        Let's Connect &amp;
-                        <span>Grow Together.</span>
-                    </h2>
+                <div class="contact-links">
+                    <a href="mailto:yunitasiregar080605@gmail.com" class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">✉</span>
+                        <span class="contact-details">
+                            <small>EMAIL</small>
+                            <strong>yunitasiregar080605@gmail.com</strong>
+                        </span>
+                        <span class="contact-arrow" aria-hidden="true">↗</span>
+                    </a>
 
-                    <p>
-                        Terima kasih telah mengunjungi
-                        portofolio saya. Saya terbuka untuk
-                        berbagi pengalaman, bertukar ide,
-                        dan mempelajari hal-hal baru.
-                    </p>
-
-                    <div class="contact-links">
-
-                        <a href="mailto:yunitasiregar080605@gmail.com"
-                           class="btn btn-primary">
-                            ✉ EMAIL ME
-                        </a>
-
-                        <a href="https://www.instagram.com/yunitaasrgr/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="btn btn-outline">
-                            ◎ INSTAGRAM
-                        </a>
-
-                    </div>
-
+                    <a
+                        href="https://www.instagram.com/yunitaasrgr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-card"
+                    >
+                        <span class="contact-icon" aria-hidden="true">◎</span>
+                        <span class="contact-details">
+                            <small>INSTAGRAM</small>
+                            <strong>@yunitaasrgr</strong>
+                        </span>
+                        <span class="contact-arrow" aria-hidden="true">↗</span>
+                    </a>
                 </div>
-
             </div>
         </section>
 
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <p>© 2026 YUNITA SIREGAR</p>
-        <p>KEEP LEARNING, KEEP GROWING.</p>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>© 2026 YUNITA SIREGAR</p>
+            <p>KEEP LEARNING, KEEP GROWING.</p>
+        </div>
     </footer>
 
 </body>
